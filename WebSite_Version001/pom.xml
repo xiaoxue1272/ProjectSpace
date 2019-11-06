@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.gyj</groupId>
+  <artifactId>WebSite_Version0.0.1</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <properties>
+      <spring.version>4.3.24.RELEASE</spring.version>
+    </properties>
+
+    <dependencies>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.16.6</version>
+      </dependency>
+      <!-- 文件上传插件 -->
+      <dependency>
+        <groupId>commons-fileupload</groupId>
+        <artifactId>commons-fileupload</artifactId>
+        <version>1.4</version>
+      </dependency>
+      <!-- 文件上传插件 -->
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.6</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>3.6</version>
+      </dependency>
+
+      <!-- web应用程序所需servlet api的依赖 -->
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>servlet-api</artifactId>
+        <version>2.5</version>
+        <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>javax.servlet.jsp</groupId>
+        <artifactId>jsp-api</artifactId>
+        <version>2.1</version>
+        <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>jstl</groupId>
+        <artifactId>jstl</artifactId>
+        <version>1.2</version>
+      </dependency>
+
+      <!-- spring框架相关的依赖 -->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context-support</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-tx</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+
+      <!-- 用于Spring框架整合JUINT4进行单测试的依赖 -->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>${spring.version}</version>
+        <scope>test</scope>
+      </dependency>
+
+      <!-- 引入JDBC驱动8.0版本，目前Oracle官网推荐使用5.1.47 -->
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.16</version>
+      </dependency>
+
+      <!-- mybatis依赖 -->
+      <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis</artifactId>
+        <version>3.5.2</version>
+      </dependency>
+
+      <!-- mybatis与spring整合所需的要依赖 -->
+      <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis-spring</artifactId>
+        <version>2.0.1</version>
+      </dependency>
+
+      <!-- mybatis plus的依赖 -->
+      <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>mybatis-plus</artifactId>
+        <version>3.1.2</version>
+      </dependency>
+
+      <!-- logback日志管理器 -->
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.2.3</version>
+      </dependency>
+
+      <!-- logback管理与sfl4j管理器的桥接器 -->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>log4j-over-slf4j</artifactId>
+        <version>1.7.26</version>
+      </dependency>
+
+      <!-- JSON字符串解析 -->
+      <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>1.2.62</version>
+      </dependency>
+
+
+      <!-- 引入阿里的druid数据库连接池 -->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+        <version>1.1.18</version>
+      </dependency>
+      <!-- 单元测试 -->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version>
+        <scope>test</scope>
+      </dependency>
+
+      <!-- pageHelper -->
+      <dependency>
+        <groupId>com.github.pagehelper</groupId>
+        <artifactId>pagehelper</artifactId>
+        <version>4.1.6</version>
+      </dependency>
+    </dependencies>
+
+
+    <build>
+      <plugins>
+        <!-- 配置编译器插件，指定编译级为1.8 -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.1</version>
+          <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+            <encoding>utf-8</encoding>
+          </configuration>
+        </plugin>
+
+        <!-- 引入内嵌tomcat7服务器的插件依赖 -->
+        <plugin>
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat7-maven-plugin</artifactId>
+          <configuration>
+            <!-- 配置当前应用的上下文路径。如果指定为“/”，则在访问应用程序时不需要添加上下文路径 -->
+            <path>/</path>
+            <!-- 配置请求URI中的编码格式 -->
+            <uriEncoding>utf-8</uriEncoding>
+            <port>8080</port>
+          </configuration>
+        </plugin>
+        <!-- jerry插件，端口号默认为80 -->
+        <plugin>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-maven-plugin</artifactId>
+          <version>9.4.2.v20170220</version>
+          <configuration>
+            <scanIntervalSeconds>300</scanIntervalSeconds>
+            <httpConnector>
+              <port>80</port>
+            </httpConnector>
+            <webApp>
+              <contextPath>/</contextPath>
+            </webApp>
+            <stopPort>9966</stopPort>
+          </configuration>
+        </plugin>
+      </plugins>
+    </build>
+</project>
