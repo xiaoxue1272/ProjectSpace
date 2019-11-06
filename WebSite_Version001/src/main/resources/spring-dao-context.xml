@@ -76,7 +76,7 @@
 
 	<!-- MyBatis 动态扫描 Mapper -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.domain.dao" />
+		<property name="basePackage" value="com.dao" />
 	</bean>
 
 	<!-- 配置事务管理 -->
