@@ -1,5 +1,8 @@
 package com.utils;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -9,6 +12,7 @@ import java.util.regex.Pattern;
  */
 //自定义校验类
 public class ValidateString {
+
 
     //自定义正则表达式验证字符串
     public static Boolean RegexString(String reg, String message){
@@ -41,5 +45,24 @@ public class ValidateString {
             regmesg = message;
         }
         return regmesg;
+    }
+
+    //Date日期转换
+    //年月日
+    public static String DateToString(Date date){
+        return new SimpleDateFormat("yyyy年MM月dd日").format(date);
+    }
+
+    //String日期格式转化Date
+    public static Date StringToDate(String str){
+        SimpleDateFormat format = new SimpleDateFormat( "yyyy年MM月dd");
+        Date date = null;
+        try {
+             date = format.parse(str);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }finally {
+            return date;
+        }
     }
 }
