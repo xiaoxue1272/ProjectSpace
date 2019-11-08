@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5643db2d-2083-4686-9ea4-896828384410" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/ValidateString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/ValidateString.java" afterDir="false" />
-    </list>
+    <list default="true" id="5643db2d-2083-4686-9ea4-896828384410" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/utils/ValidateString.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+            <state relative-caret-position="41">
+              <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1250#1251#0" expanded="true" />
@@ -418,23 +415,6 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Test.t" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="WebSite_Version001" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="METHOD_NAME" value="t" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.Test.t" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -447,7 +427,7 @@
       <updated>1573003261868</updated>
       <workItem from="1573003265873" duration="602000" />
       <workItem from="1573008591957" duration="2585000" />
-      <workItem from="1573092446617" duration="10960000" />
+      <workItem from="1573092446617" duration="11540000" />
     </task>
     <task id="LOCAL-00001" summary="空项目">
       <created>1573003446938</created>
@@ -484,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573107217834</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2019.11.7&#10;增加了正则验证的工具类&#10;添加了日期转化">
+      <created>1573110176138</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1573110176138</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -520,10 +507,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14147000" />
+    <option name="totallyTimeSpent" value="14727000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.25670242" />
       <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.25670242" />
@@ -568,7 +556,8 @@
     <MESSAGE value="空项目" />
     <MESSAGE value="整理好的配置文件" />
     <MESSAGE value="2019.11.7&#10;增加了正则验证的工具类" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019.11.7&#10;增加了正则验证的工具类" />
+    <MESSAGE value="2019.11.7&#10;增加了正则验证的工具类&#10;添加了日期转化" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019.11.7&#10;增加了正则验证的工具类&#10;添加了日期转化" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -816,8 +805,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/utils/ValidateString.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+        <state relative-caret-position="41">
+          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1250#1251#0" expanded="true" />
