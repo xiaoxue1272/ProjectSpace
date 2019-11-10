@@ -2,6 +2,7 @@ package com.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Collection;
 import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -64,5 +65,37 @@ public class ValidateString {
         }finally {
             return date;
         }
+    }
+
+    public static Boolean isEmpty(Collection<? super Collection> list){
+        Boolean b = true;
+        if (list.size()!=0){
+            b=false;
+        }
+        return b;
+    }
+
+    public static Boolean hasText(String str){
+        Boolean b = false;
+        if (str!=null&&!str.equals("")&&str.length()>0){
+            Pattern pattern = Pattern.compile("^\\s*$");
+            Matcher matcher = pattern.matcher(str);
+            if (!matcher.matches()){
+                b=true;
+            }
+        }
+        return b;
+    }
+
+    public static Boolean isNumber(String str){
+        Boolean b = false;
+        if (hasText(str)){
+            Pattern pattern = Pattern.compile("^(\\-|\\+)?\\d+(\\.\\d+)?$");
+            Matcher matcher = pattern.matcher(str);
+            if (matcher.matches()){
+                b=true;
+            }
+        }
+        return b;
     }
 }
