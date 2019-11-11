@@ -50,4 +50,14 @@ public class MysqlBean {
         this.passowrd = passowrd;
         TableName = tableName;
     }
+
+    @Override
+    public String toString() {
+        return "MysqlBean{" +
+                "jdbcUrl='" + jdbcUrl + '\'' +
+                ", user='" + user + '\'' +
+                ", passowrd='" + passowrd + '\'' +
+                ", TableName='" + TableName + '\'' +
+                '}';
+    }
 }
