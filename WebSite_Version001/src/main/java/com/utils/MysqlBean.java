@@ -11,13 +11,15 @@ public class MysqlBean {
     private String user;
     private String passowrd;
     private String TableName;
+    private String projectName;
+    private String beanPackagesName;
 
     public String getJdbcUrl() {
         return jdbcUrl;
     }
 
-    public void setJdbcUrl(String jdbcUrl) {
-        this.jdbcUrl = jdbcUrl;
+    public void setJdbcUrl(String jdbcUrl , String DataBaseName) {
+        this.jdbcUrl = "jdbc:mysql://"+jdbcUrl+"/"+DataBaseName+"?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai";
     }
 
     public String getUser() {
@@ -44,11 +46,29 @@ public class MysqlBean {
         TableName = tableName;
     }
 
-    public MysqlBean(String jdbcUrl, String user, String passowrd, String tableName) {
-        this.jdbcUrl = jdbcUrl;
+    public String getProjectName() {
+        return projectName;
+    }
+
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+    }
+
+    public String getBeanPackagesName() {
+        return beanPackagesName;
+    }
+
+    public void setBeanPackagesName(String beanPackagesName) {
+        this.beanPackagesName = beanPackagesName;
+    }
+
+    public MysqlBean(String jdbcUrl, String DataBaseName, String user, String passowrd, String tableName, String projectName, String beanPackagesName) {
+        this.jdbcUrl = "jdbc:mysql://"+jdbcUrl+"/"+DataBaseName+"?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai";
         this.user = user;
         this.passowrd = passowrd;
         TableName = tableName;
+        this.projectName = projectName;
+        this.beanPackagesName = beanPackagesName;
     }
 
     @Override
@@ -58,6 +78,8 @@ public class MysqlBean {
                 ", user='" + user + '\'' +
                 ", passowrd='" + passowrd + '\'' +
                 ", TableName='" + TableName + '\'' +
+                ", projectName='" + projectName + '\'' +
+                ", beanPackagesName='" + beanPackagesName + '\'' +
                 '}';
     }
 }
