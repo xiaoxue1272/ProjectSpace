@@ -11,7 +11,6 @@ public class MysqlBean {
     private String user;
     private String passowrd;
     private String TableName;
-    private String projectName;
     private String beanPackagesName;
 
     public String getJdbcUrl() {
@@ -46,14 +45,6 @@ public class MysqlBean {
         TableName = tableName;
     }
 
-    public String getProjectName() {
-        return projectName;
-    }
-
-    public void setProjectName(String projectName) {
-        this.projectName = projectName;
-    }
-
     public String getBeanPackagesName() {
         return beanPackagesName;
     }
@@ -62,12 +53,11 @@ public class MysqlBean {
         this.beanPackagesName = beanPackagesName;
     }
 
-    public MysqlBean(String jdbcUrl, String DataBaseName, String user, String passowrd, String tableName, String projectName, String beanPackagesName) {
+    public MysqlBean(String jdbcUrl, String DataBaseName, String user, String passowrd, String tableName, String beanPackagesName) {
         this.jdbcUrl = "jdbc:mysql://"+jdbcUrl+"/"+DataBaseName+"?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai";
         this.user = user;
         this.passowrd = passowrd;
-        TableName = tableName;
-        this.projectName = projectName;
+        this.TableName = tableName;
         this.beanPackagesName = beanPackagesName;
     }
 
@@ -78,7 +68,6 @@ public class MysqlBean {
                 ", user='" + user + '\'' +
                 ", passowrd='" + passowrd + '\'' +
                 ", TableName='" + TableName + '\'' +
-                ", projectName='" + projectName + '\'' +
                 ", beanPackagesName='" + beanPackagesName + '\'' +
                 '}';
     }

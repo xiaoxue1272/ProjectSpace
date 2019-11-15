@@ -18,7 +18,7 @@ import java.util.List;
 public class MysqlConnection {
 
     public static void main(String[] args) {
-        CreatEntity(new MysqlBean("localhost:3306","week1","root","127201","tb_goodskind","day11","com/bean"));
+        CreatEntity(new MysqlBean("localhost:3306","week1","root","127201","movie","com/bean"));
     }
 
 
@@ -54,18 +54,19 @@ public class MysqlConnection {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            CreateNewBean("day11","com/bean",bean.getTableName(),columns,columnsType);
+            CreateNewBean(bean.getBeanPackagesName(),bean.getTableName(),columns,columnsType);
         }
     }
 
     //io流创建文件（实体Bean）方法
-    public static void CreateNewBean(String ProjectName,String packageName,String TableName,List<String> columns,List<String> columnsType){
+    public static void CreateNewBean(String packageName,String TableName,List<String> columns,List<String> columnsType){
         TableName = TableName.replace(TableName.substring(0,1),TableName.substring(0,1).toUpperCase());
-        File BeanPackages = new File(ProjectName+"/src/main/java/"+packageName);
+        File file = new File("src");
+        File BeanPackages = new File(file.getAbsolutePath()+"/main/java/"+packageName);
         if (!BeanPackages.exists()){
             BeanPackages.mkdirs();
         }
-        File BeanPath = new File(ProjectName+"/src/main/java/" + packageName + "/" + TableName+".java");
+        File BeanPath = new File(file.getAbsolutePath()+"/main/java/" + packageName + "/" + TableName+".java");
         if (!BeanPath.exists()){
             try {
                 BeanPath.createNewFile();
@@ -75,7 +76,7 @@ public class MysqlConnection {
         }
         PrintWriter pw = null;
         try {
-            pw = new PrintWriter("day11/src/main/java/" + packageName + "/" + TableName+".java");
+            pw = new PrintWriter(file.getAbsolutePath()+"/main/java/" + packageName + "/" + TableName+".java");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
